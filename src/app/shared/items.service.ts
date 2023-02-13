@@ -7,7 +7,7 @@ export class ItemsService {
     new Item('Santa', 30, 'Soft santa plushie', 'assets/images/santa.jpg'),
     new Item('Dragon', 45, 'Dragon plushie', 'assets/images/dragon.jpg'),
     new Item('Unicorn', 28, "Unicorn with a glow in the dark collar", 'assets/images/unicorn.jpg'),
-    new Item('Christmas Wraith', 10, 'Great decoration or christmas tree ornament', 'assets/images/christmas-wraith.jpg'),
+    new Item('Christmas Wreath', 10, 'Great decoration or christmas tree ornament', 'assets/images/christmas-wreath.jpg'),
     new Item('Corgi', 25, 'Cute soft plushie corgi dog', 'assets/images/corgi.jpg'),
     new Item('Dog', 25, 'Cute dog with a scarf', 'assets/images/dog.jpg'),
     new Item('Doll', 5, 'Doll in a blue dress with curly hair', 'assets/images/doll.jpg'),
@@ -25,4 +25,8 @@ export class ItemsService {
     new Item('Nurse', 15, 'Nurse plushie with a mask and a complete nurse outfit', 'assets/images/nurse.jpg'),
     new Item('Minions Set', 75, 'Complete minions set with Bob, Kevin and Stewart', 'assets/images/minions-set.jpg'),
   ];
+
+  getItems(): Item[] {
+    return this.items;
+  }
 }
