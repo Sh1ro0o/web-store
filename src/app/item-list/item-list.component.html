@@ -1,1 +1,7 @@
-<app-item></app-item>
+<mat-grid-list [gridCols]
+               rowHeight="420px"
+               gutterSize="50px">
+  <mat-grid-tile *ngFor="let item of itemList">
+    <app-item [item]="item"></app-item>
+  </mat-grid-tile>
+</mat-grid-list>

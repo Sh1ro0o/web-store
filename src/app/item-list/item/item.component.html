@@ -1,12 +1,12 @@
 <mat-card role="group" class="item-card">
   <div class="item-name">
-    <mat-card-title>Christmas Wreath</mat-card-title>
+    <mat-card-title>{{ item.name }}</mat-card-title>
   </div>
-  <img mat-card-image class="item-img" src="assets/images/christmas-wreath.jpg" alt="photo of croched item here">
+  <img mat-card-image class="item-img" [src]="item.imgPath" alt="photo of croched item here">
   <div class="price-add-item-container">
     <mat-card-actions align="end">
       <div class="item-price">
-        69 €
+        {{ item.price }} €
       </div>
       <button mat-raised-button color="accent">
         <div class="cart-add-button">

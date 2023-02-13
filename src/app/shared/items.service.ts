@@ -12,7 +12,7 @@ export class ItemsService {
     new Item('Dog', 25, 'Cute dog with a scarf', 'assets/images/dog.jpg'),
     new Item('Doll', 5, 'Doll in a blue dress with curly hair', 'assets/images/doll.jpg'),
     new Item('Unicorn Baby Socks', 5, 'Comfortable and cute socks for a baby', 'assets/images/unicorn-baby-socks.jpg'),
-    new Item('Snowman', 15, 'Snowman plushi with blue clothes', 'assets/imagessnowman.jpg'),
+    new Item('Snowman', 15, 'Snowman plushi with blue clothes', 'assets/images/snowman.jpg'),
     new Item('Gnome', 5, 'Small cute gnome plushie', 'assets/images/gnome.jpg'),
     new Item('Helicopter', 15, 'Cute helicopter plushie with eyes', 'assets/images/helicopter.jpg'),
     new Item('Grinch', 15, 'Grinch doll for decoration', 'assets/images/grinch.jpg'),
@@ -27,6 +27,7 @@ export class ItemsService {
   ];
 
   getItems(): Item[] {
+    //backend call to get items
     return this.items;
   }
 }
