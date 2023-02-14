@@ -1,8 +1,8 @@
 <mat-card role="group" class="item-card">
-  <div class="item-name">
+  <div class="item-name" (click)="displayItemDetails()">
     <mat-card-title>{{ item.name }}</mat-card-title>
   </div>
-  <img mat-card-image class="item-img" [src]="item.imgPath" alt="photo of croched item here">
+  <img mat-card-image class="item-img" [src]="item.imgPath" alt="photo of croched item here" (click)="displayItemDetails()">
   <div class="price-add-item-container">
     <mat-card-actions align="end">
       <div class="item-price">

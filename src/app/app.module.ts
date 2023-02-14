@@ -18,6 +18,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ItemDetailsComponent } from './item-list/item-details/item-details.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 
 @NgModule({
@@ -26,7 +29,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     NavigationComponent,
     ItemListComponent,
     ItemComponent,
-    GridColsDirective
+    GridColsDirective,
+    ItemDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatGridListModule,
     MatIconModule,
     MatToolbarModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

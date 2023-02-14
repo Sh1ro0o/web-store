@@ -1,13 +1,15 @@
 @import '../../shared/variables';
 
 .item-card {
-  max-width: 100%;
+  max-width: 650px;
   border: $tertiaryBrandColor 5px solid;
+  overflow: scroll;
+  max-height: 800px;
+  overflow-x: hidden;
 }
 
 .item-img {
-  height: 300px;
-  cursor: pointer;
+  max-height: 600px;
 }
 
 .item-name {
@@ -15,7 +17,6 @@
   padding: 2%;
   background-color: $tertiaryBrandColor;
   color: $secondaryBrandColor;
-  cursor: pointer;
 }
 
 .price-add-item-container {
@@ -31,4 +32,14 @@
 
 .cart-add-button {
   padding-top: 25%;
+}
+
+.item-description {
+  background-color: $tertiaryBrandColor;
+  color: $secondaryBrandColor;
+  padding: 1% 0;
+}
+
+p {
+  font-size: large;
 }
