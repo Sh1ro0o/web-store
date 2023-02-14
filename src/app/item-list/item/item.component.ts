@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Item } from 'src/app/shared/item.model';
+import { Item } from 'src/app/shared/Models/item.model';
 import { ItemDetailsComponent } from '../item-details/item-details.component';
 
 @Component({
