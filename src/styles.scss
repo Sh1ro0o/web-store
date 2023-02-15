@@ -25,3 +25,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background: $scrollBarHover;
   cursor: pointer !important;
 }
+
+.router-active {
+  border-bottom: 5px solid $secondaryBrandColor;
+}
