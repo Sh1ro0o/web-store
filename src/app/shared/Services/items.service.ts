@@ -3,7 +3,7 @@ import { Item } from "../Models/item.model";
 
 @Injectable({providedIn: 'root'})
 export class ItemsService {
-  items: Item[] = [
+  private items: Item[] = [
     //       id    name                    price        description                                                 img path
     new Item('1', 'Santa',                  30,     'Soft santa plushie',                                     'assets/images/santa.jpg'),
     new Item('2', 'Dragon',                 45,     'Dragon plushie',                                         'assets/images/dragon.jpg'),
