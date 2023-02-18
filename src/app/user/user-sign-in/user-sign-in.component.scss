@@ -1,0 +1,56 @@
+@import '/src/app/shared/variables';
+
+
+.register-form-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2.5%;
+  color: $secondaryBrandColor;
+  background-color: $tertiaryBrandColor;
+}
+
+.form-content {
+  margin: auto;
+  width: 100%;
+  padding: 0;
+}
+
+.form-content > form > mat-form-field {
+  width: 80%;
+  display: block;
+  margin: 2.5% auto;
+}
+
+.submit-button {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.check-mark-green {
+  font-weight: bold;
+  color: rgb(40, 184, 11);
+}
+
+.check-mark-red {
+  font-weight: bold;
+  color: red;
+}
+
+.sign-in-failed-display {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center !important;
+  color: red;
+  padding: 2%;
+  margin-bottom: 5%;
+  font-weight: bold;
+}
+
+.sign-in-failed-display > p {
+  margin: 0;
+}

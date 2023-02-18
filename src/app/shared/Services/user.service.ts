@@ -30,23 +30,24 @@ export class UserService {
     this.isUserSignedInEmitter.next(this.isUserSignedIn);
   }
 
-  signInUser(userToSignIn: User): void {
+  signInUser(username: string, password: string): boolean {
     //simulates database check if user exists
-    let isUserValid = false;
-
-    this.users.forEach(user => {
-      if(user.isEqual(userToSignIn)) {
+    for (let i = 0; i < this.users.length; i++) {
+      if(this.users[i].authorizeUser(username, password)) {
+        this.currentUser = this.users[i];
         this.isUserSignedIn = true;
         this.isUserSignedInEmitter.next(this.isUserSignedIn);
-        return;
+        return true;
       }
-    });
-
+    }
     console.log('no such user found!');
+    return false;
   }
 
   signOutUser(): void {
-    this.isUserSignedIn = false;
     this.currentUser = null;
+    this.isUserSignedIn = false;
+
+    this.isUserSignedInEmitter.next(this.isUserSignedIn);
   }
 }

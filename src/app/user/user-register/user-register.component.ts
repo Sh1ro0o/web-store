@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControlOptions } from '@angular/forms';
 import { User } from 'src/app/shared/Models/user.model';
 import { UserService } from 'src/app/shared/Services/user.service';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { passwordContainsLowerCaseValidator } from 'src/app/shared/Validators/password-contains-lowercase';
 import { passwordContainsNumberValidator } from 'src/app/shared/Validators/password-contains-number';
 import { passwordContainsUpperCaseValidator } from 'src/app/shared/Validators/password-contains-uppercase';

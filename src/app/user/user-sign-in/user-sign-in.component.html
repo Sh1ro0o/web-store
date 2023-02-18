@@ -1,1 +1,35 @@
-<p>user-sign-in works!</p>
+<mat-card class="register-form-container">
+  <mat-card-title class="form-title">Sign In</mat-card-title>
+  <mat-card-content class="form-content">
+    <form (ngSubmit)="onSubmit()" [formGroup]="signInForm">
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="username"
+          maxlength="30">
+          <mat-error *ngIf="signInForm.get('username').hasError('required')">Username is <b>required</b></mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          formControlName="password"
+          maxlength="30">
+          <mat-error *ngIf="signInForm.get('password').hasError('required')">Password is <strong>required</strong></mat-error>
+      </mat-form-field>
+      <mat-card *ngIf="!signInSuccessful" class="sign-in-failed-display">
+        <p>Sign in failed, incorrect Username or Password</p>
+      </mat-card>
+      <div class="submit-button">
+        <button
+          mat-raised-button
+          color="accent"
+          type="submit"
+          [disabled]="!signInForm.valid">SUBMIT</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

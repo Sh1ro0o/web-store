@@ -18,4 +18,9 @@
      routerLink="/user/register"
      routerLinkActive="router-active"><span>Register</span>
   </a>
+  <a *ngIf="isUserSignedIn"
+     class="navbar-link navbar-item"
+     routerLink="/"
+     (click)="signOut()"><span>Sign Out</span>
+  </a>
 </mat-toolbar>

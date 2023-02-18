@@ -26,4 +26,8 @@ export class NavigationComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.signInSubscription.unsubscribe();
   }
+
+  signOut(): void {
+    this.userService.signOutUser();
+  }
 }

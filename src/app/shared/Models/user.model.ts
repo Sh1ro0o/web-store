@@ -15,4 +15,11 @@ export class User {
     else
       return false;
   }
+
+  authorizeUser(username: string, password: string): boolean {
+    if(this.username === username && this.password === password)
+      return true;
+    else
+      return false
+  }
 }
