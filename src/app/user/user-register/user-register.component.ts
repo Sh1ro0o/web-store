@@ -15,7 +15,9 @@ import { passwordMatchesValidator } from 'src/app/shared/Validators/password-mat
 })
 export class UserRegisterComponent implements OnInit {
   registerForm: FormGroup;
+  passwordType: string = "password"
   user: User;
+
 
   constructor(private fb: FormBuilder, private userService: UserService, private router: Router) { }
 
@@ -47,6 +49,13 @@ export class UserRegisterComponent implements OnInit {
 
     //forwads to home page
     this.router.navigate(['/']);
+  }
+
+  showOrHidePassword(): void {
+    if(this.passwordType === 'password')
+      this.passwordType = "text";
+    else
+      this.passwordType = "password";
   }
 
 }

@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class UserSignInComponent implements OnInit {
   signInForm: FormGroup;
   signInSuccessful: boolean = true;
+  passwordType: string = "password"
 
   constructor(private fb: FormBuilder, private userService: UserService, private router: Router) { }
 
@@ -30,5 +31,12 @@ export class UserSignInComponent implements OnInit {
     if(this.signInSuccessful) {
       this.router.navigate(['/']);
     }
+  }
+
+  showOrHidePassword(): void {
+    if(this.passwordType === 'password')
+      this.passwordType = "text";
+    else
+      this.passwordType = "password";
   }
 }

@@ -15,9 +15,12 @@
         <mat-label>Password</mat-label>
         <input
           matInput
-          type="password"
+          [type]="passwordType"
           formControlName="password"
           maxlength="30">
+          <button type="button" matSuffix mat-icon-button (click)="showOrHidePassword()">
+            <mat-icon>remove_red_eye</mat-icon>
+          </button>
           <mat-error *ngIf="signInForm.get('password').hasError('required')">Password is <strong>required</strong></mat-error>
       </mat-form-field>
       <mat-card *ngIf="!signInSuccessful" class="sign-in-failed-display">
