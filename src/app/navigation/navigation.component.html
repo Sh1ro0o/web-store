@@ -4,14 +4,17 @@
        alt="PiNa logo"
        routerLink="/">
   <span class="example-spacer"></span>
+  <span *ngIf="isUserSignedIn" class="navbar-link navbar-item">Welcome, {{ user.username }}</span>
   <a href="#" class="navbar-link navbar-item navbar-icon">
     <span><mat-icon>shopping_cart</mat-icon></span>
   </a>
-  <a class="navbar-link navbar-item"
+  <a *ngIf="!isUserSignedIn"
+     class="navbar-link navbar-item"
      routerLink="/user/sign-in"
      routerLinkActive="router-active"><span>Sign In</span>
   </a>
-  <a class="navbar-link navbar-item"
+  <a *ngIf="!isUserSignedIn"
+     class="navbar-link navbar-item"
      routerLink="/user/register"
      routerLinkActive="router-active"><span>Register</span>
   </a>

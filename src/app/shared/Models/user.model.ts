@@ -8,4 +8,11 @@ export class User {
     this.password = password;
     this.email = email;
   }
+
+  isEqual(user: User): boolean {
+    if(this.username === user.username && this.password == user.password && this.email == user.email)
+      return true;
+    else
+      return false;
+  }
 }

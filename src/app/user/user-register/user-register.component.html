@@ -1,1 +1,96 @@
-<p>user-register works!</p>
+
+<mat-card class="register-form-container">
+  <mat-card-title class="form-title">Registration</mat-card-title>
+  <mat-card-content class="form-content">
+    <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="username"
+          maxlength="30">
+          <mat-error *ngIf="registerForm.get('username').hasError('required')">Username is <b>required</b></mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          formControlName="email">
+          <mat-error *ngIf="registerForm.get('email').hasError('required')">Email is <strong>required</strong></mat-error>
+          <mat-error *ngIf="registerForm.get('email').hasError('email')">Email is inavlid</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          formControlName="password"
+          maxlength="30">
+          <mat-error *ngIf="registerForm.get('password').hasError('required')">Password is <strong>required</strong></mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Repeat Password</mat-label>
+        <input
+          matInput
+          type="password"
+          formControlName="rePassword"
+          maxlength="30">
+          <mat-error *ngIf="registerForm.get('rePassword').hasError('required')">Password-re is <strong>required</strong></mat-error>
+      </mat-form-field>
+
+      <mat-card class="passwordTasks" *ngIf="registerForm.get('password').dirty">
+        <table mat-table>
+          <tr mat-row>
+            <td mat-cell [ngClass]="(registerForm.controls['password'].hasError('minlength')) ? 'check-mark-red' : 'check-mark-green'">
+              <p>✓</p>
+            </td>
+            <td mat-cell>
+              <p class="task-padding"> Password must be between 8 - 30 characters</p>
+            </td>
+          </tr>
+          <tr mat-row>
+            <td mat-cell [ngClass]="(registerForm.controls['password'].hasError('upperCase')) ? 'check-mark-red' : 'check-mark-green'">
+              <p>✓<p>
+            </td>
+            <td mat-cell>
+              <p class="task-padding">At least 1 upper case character</p>
+            </td>
+          </tr>
+          <tr mat-row>
+            <td mat-cell [ngClass]="(registerForm.controls['password'].hasError('lowerCase')) ? 'check-mark-red' : 'check-mark-green'">
+              <p>✓</p>
+            </td>
+            <td mat-cell>
+              <p class="task-padding">At least 1 lower case character</p>
+            </td>
+          </tr>
+          <tr mat-row>
+            <td mat-cell [ngClass]="(registerForm.controls['password'].hasError('number')) ? 'check-mark-red' : 'check-mark-green'">
+              <p>✓</p>
+            </td>
+            <td mat-cell>
+              <p class="task-padding">At least 1 number</p>
+            </td>
+          </tr>
+          <tr mat-row>
+            <td mat-cell [ngClass]="(registerForm.hasError('passwordsMatch')) ? 'check-mark-red' : 'check-mark-green'">
+              <p>✓</p>
+            </td>
+            <td mat-cell>
+              <p class="task-padding">Passwords match</p>
+            </td>
+          </tr>
+        </table>
+      </mat-card>
+      <div class="submit-button">
+        <button
+          mat-raised-button
+          color="accent"
+          type="submit"
+          [disabled]="!registerForm.valid">SUBMIT</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
