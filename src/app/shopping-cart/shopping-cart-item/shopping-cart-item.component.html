@@ -1,0 +1,22 @@
+<mat-card
+  class="shopping-cart-item-container"
+  fxLayoutAlign="center center"
+  fxLayout="row">
+    <div fxFlex="10" class="img-container">
+      <img class="item-img" [src]="shoppingCartItem.getItem().imgPath" alt="photo of croched item here">
+    </div>
+    <div fxFlex="35">
+      <h2 class="content-text">{{ shoppingCartItem.getItem().name }}</h2>
+    </div>
+    <h1 fxFlex="25" class="content-text">
+      <button class="content-button" mat-mini-fab color="primary" (click)="decreaseAmmount()"><mat-icon>remove</mat-icon></button>
+      {{ shoppingCartItem.getAmmount() }}
+      <button class="content-button" mat-mini-fab color="primary" (click)="increaseAmmount()"><mat-icon>add</mat-icon></button>
+    </h1>
+    <h1 fxFlex="20" class="content-text">{{ shoppingCartItem.getAmmount() }} x {{ shoppingCartItem.getItem().price }} €</h1>
+    <div fxFlex="10">
+      <button mat-fab color="warn" (click)="removeItem()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+</mat-card>

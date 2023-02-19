@@ -8,9 +8,13 @@
       <div class="item-price">
         {{ item.price }} €
       </div>
-      <button mat-raised-button color="accent">
+      <button
+        mat-raised-button color="accent"
+        [disabled]="addedToCart"
+        (click)="addToCart()">
         <div class="cart-add-button">
-          <mat-icon>add_shopping_cart</mat-icon>
+          <mat-icon *ngIf="!addedToCart">add_shopping_cart</mat-icon>
+          <mat-icon *ngIf="addedToCart">check</mat-icon>
         </div>
       </button>
     </mat-card-actions>

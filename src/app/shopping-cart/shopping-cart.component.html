@@ -1,0 +1,6 @@
+<div fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap="20px">
+  <app-shopping-cart-item
+    *ngFor="let item of shoppingCart"
+    [shoppingCartItem]="item">
+  </app-shopping-cart-item>
+</div>
