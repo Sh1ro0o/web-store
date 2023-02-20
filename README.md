@@ -1,5 +1,7 @@
 # WebCrochetStore
 
+![project-1](https://user-images.githubusercontent.com/59924160/220194393-6efe89ed-c6b4-4e22-b9e5-ae00b6c93821.png)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
 
 ## Development server
