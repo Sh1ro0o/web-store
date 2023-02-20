@@ -4,3 +4,6 @@
     [shoppingCartItem]="item">
   </app-shopping-cart-item>
 </div>
+<mat-card class="empty-cart-message-container" *ngIf="shoppingCart.length === 0">
+  <h1>Shopping cart is empty</h1>
+</mat-card>

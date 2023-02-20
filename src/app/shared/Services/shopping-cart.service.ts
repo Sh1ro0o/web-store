@@ -4,7 +4,7 @@ import { ShoppingCartItem } from "../Models/shopping-cart-item.model";
 
 @Injectable({providedIn: 'root'})
 export class ShoppingCartService {
-  private shoppingCart: ShoppingCartItem[] = [new ShoppingCartItem(new Item('1','Santa', 30,'Soft santa plushie', 'assets/images/santa.jpg', 5))];
+  private shoppingCart: ShoppingCartItem[] = [];
 
   //increases the ammount of a creatin item in shopping cart if item already exists inside
   addItem(item: Item): void {
